@@ -1,42 +1,39 @@
 import { useState } from "react";
 
-const Conteudo = () => {
-  const [item, setItem] = useState("");
-  // estado atual e funcao que atualiza o estado
-  // LISTA = []
-  // ADICIONAR ITEM
-  // STATE QUE VAI MUDAR O
-  const [listas, setLista] = useState([]);
+const Conteudo2 = () => {
+  const [novoItem, setNovoItem] = useState("");
+  const [lista, setLista] = useState([]);
 
-  function handleAddTask() {
-    setLista([...listas, item]);
-    setItem("");
-  }
+  const add = () => {
+    setLista([...lista, novoItem]);
+  };
 
   return (
-    <>
-      <h1>Tasks</h1>
-      <div className="flex flex-col items-center">
-        <label htmlFor="value">Write a value to task</label>
+    <div className="flex flex-col items-center mt-6">
+      <label htmlFor="newtask" className="font-bold text-xl text-blue-500 mt-4 mb-6">
+        Nova task
+      </label>
+      <div className="flex flex-row gap-2">
         <input
           type="text"
-          placeholder="Go a store..."
-          onChange={(e) => setItem(e.target.value)}
+          placeholder="Criar site..."
+          onChange={(e) => setNovoItem(e.target.value)}
+          className="border border-solid rounded-full p-1"
         />
         <button
-          className="bg-blue-500 rounded-full py-2 px-4 text-white font-bold uppercase hover:bg-blue-400"
-          onClick={handleAddTask}
+          className="font-bold uppercase text-white bg-blue-500 hover:bg-blue-400 rounded-full px-4 flex items-center justify-center"
+          onClick={add}
         >
-          Add task
+          Adicionar
         </button>
-        <ul>
-          {listas.map((lista, index) => (
-            <li key={index}>- {lista}</li>
-          ))}
-        </ul>
       </div>
-    </>
+      <ul>
+        {lista.map((listas, index) => (
+          <li key={index}>{listas}</li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-export default Conteudo;
+export default Conteudo2;

@@ -10,7 +10,7 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <Link to="https://github.com/vitormarinheiro1/fsw-barber">
+              <Link to="https://github.com/vitormarinheiro1/todo-react">
                 <FaGithub className="hover:text-zinc-700" size={26} />
               </Link>
             </li>

@@ -1,11 +1,11 @@
-import Conteudo2 from "./components/conteudo2";
+import Conteudo from "./components/conteudo";
 import Header from "./components/header";
 
 export default function App() {
   return (
     <>
       <Header />
-      <Conteudo2 />
+      <Conteudo />
     </>
   );
 }
