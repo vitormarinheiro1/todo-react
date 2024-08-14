@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Conteudo2 = () => {
+const Conteudo = () => {
   const [novoItem, setNovoItem] = useState("");
   const [lista, setLista] = useState([]);
 
@@ -36,4 +36,4 @@ const Conteudo2 = () => {
   );
 };
 
-export default Conteudo2;
+export default Conteudo;
